@@ -35,7 +35,7 @@
 # It can be that /etc/sysconfig/elasticsearch is not created, although it should be.
 # We touch it to make sure it exists. It is required by the plugin manager of elasticsearc.
 - name: touch /etc/sysconfig/elasticsearch
-  command: /usr/bin/touch /etc/sysconfig/elasticsearch
+  file: /etc/sysconfig/elasticsearch state=touch
 
 - name: Install elasticsearch plugins
   #debug: var=item
