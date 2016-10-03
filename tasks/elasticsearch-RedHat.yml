@@ -24,6 +24,6 @@
   when: not es_use_repository
   register: elasticsearch_install_from_package
 
-# ansible uri module requires python-httplib2
+# ansible uri module requires python-httplib2. Install from epel.
 - name: python-httplib2
-  pip: name=httplib2
+  yum: name=python-httplib2 state=latest
