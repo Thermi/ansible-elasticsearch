@@ -32,6 +32,11 @@
     CONF_DIR: "{{ conf_dir }}"
     ES_INCLUDE: "{{ instance_default_file }}"
 
+# It can be that /etc/sysconfig/elasticsearch is not created, although it should be.
+# We touch it to make sure it exists. It is required by the plugin manager of elasticsearc.
+- name: touch /etc/sysconfig/elasticsearch
+  command: /usr/bin/touch /etc/sysconfig/elasticsearch
+
 - name: Install elasticsearch plugins
   #debug: var=item
   command: >
