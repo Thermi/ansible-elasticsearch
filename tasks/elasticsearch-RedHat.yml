@@ -27,3 +27,6 @@
 # ansible uri module requires python-httplib2. Install from epel.
 - name: python-httplib2
   yum: name=python-httplib2 state=latest
+
+- name: create /etc/sysconfig/elasticsearch
+  file: path=/etc/sysconfig/elasticsearch state=touch
