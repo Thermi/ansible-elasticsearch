@@ -47,7 +47,7 @@
   with_items: "{{supported_xpack_features}}"
 
 #Shield configuration
-- include: shield/elasticsearch-shield.yml
+#- include: shield/elasticsearch-shield.yml
 
 #Add any feature specific configuration here
 

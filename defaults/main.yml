@@ -32,6 +32,6 @@ es_api_host: "localhost"
 es_api_port: 9200
 # stop newer ansible from complaining. If those vars aren't set properly in the playbook
 # anyway, we can at least make the playbook continue.
-users_to_remove: []
-users_to_add: []
-es_users: []
+#users_to_remove: []
+#users_to_add: []
+#es_users: []
