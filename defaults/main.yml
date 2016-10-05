@@ -20,6 +20,8 @@ es_pid_dir: "/var/run/elasticsearch"
 es_data_dirs: "/var/lib/elasticsearch"
 es_log_dir: "/var/log/elasticsearch"
 es_work_dir: "/tmp/elasticsearch"
+es_scripts_fileglob: "{{ role_path }}/files/scripts/*"
+es_templates_fileglob: "{{ role_path }}/files/templates/*"
 es_max_open_files: 65536
 es_allow_downgrades: false
 es_enable_xpack: false
