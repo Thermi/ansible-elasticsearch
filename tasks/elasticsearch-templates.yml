@@ -10,5 +10,4 @@
 - name: Copy templates to elasticsearch
   copy: src={{ item }} dest=/etc/elasticsearch/templates owner={{ es_user }} group={{ es_group }}
   notify: load-templates
-  with_fileglob:
-    - "{{ es_templates_fileglob | default('') }}"
+  with_fileglob: "{{ es_templates_fileglob }}"
